@@ -16,9 +16,14 @@
 сделайте пользователя postgres владельцем /mnt/data - chown -R postgres:postgres /mnt/data/
 перенесите содержимое /var/lib/postgres/13 в /mnt/data - mv /var/lib/postgresql/13 /mnt/data
 
-попытайтесь запустить кластер - sudo -u postgres pg_ctlcluster 13 main start
+##### Ссылка на проект: https://console.cloud.google.com/compute/instances?project=postgres2021-19831215&hl=ru
+
+> попытайтесь запустить кластер - sudo -u postgres pg_ctlcluster 13 main start
 напишите получилось или нет и почему
-задание: найти конфигурационный параметр в файлах раположенных в /etc/postgresql/10/main который надо поменять и поменяйте его
+
+##### Не получилось, т.к. он пытается запуститься из несуществующей папки.В данный каталог /var/lib/postgres/13 Postgres устанавливается по умолчанию, там же хранятся БД.
+
+> задание: найти конфигурационный параметр в файлах раположенных в /etc/postgresql/10/main который надо поменять и поменяйте его
 напишите что и почему поменяли
 попытайтесь запустить кластер - sudo -u postgres pg_ctlcluster 13 main start
 напишите получилось или нет и почему
