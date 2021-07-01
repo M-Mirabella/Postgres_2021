@@ -42,13 +42,14 @@ values (1, 'Юрист')
 
 -  Создать индекс к какой-либо из таблиц вашей БД
 
-drop index if exists sales.idx_ord_id;
+drop index if exists sales.idx_ord_id;  
 create index idx_ord_id on sales.orders(id);
 
 -  Прислать текстом результат команды explain, в которой используется данный индекс
 
-explain
+explain  
 select * from sales.orders where id < 100;
+
                                  QUERY PLAN
 -----------------------------------------------------------------------------
  Index Scan using idx_ord_id on orders  (cost=0.42..11.19 rows=101 width=83)
