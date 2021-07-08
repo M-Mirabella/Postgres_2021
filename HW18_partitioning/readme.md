@@ -5,13 +5,13 @@
 
 Секционировать большую таблицу из демо базы flights
 
-1. Скачаем БД flights, распакуем и установим.
+#### 1. Скачаем БД flights, распакуем и установим.
 
 - wget https://edu.postgrespro.ru/demo-big.zip  
 - unzip demo-big.zip
 - \i demo-big-20170815.sql
 
-2. Партиционируем таблицу tickets по хэшу, т.к. явного ключа партиционирования нет
+#### 2. Партиционируем таблицу tickets по хэшу, т.к. явного ключа партиционирования нет
 
 -- переименуем старую таблицу  
 ALTER TABLE tickets RENAME TO tickets_old;  
@@ -43,7 +43,7 @@ select count(*) from tickets_4; -- 590461
 select count(*) from tickets_5; -- 590411  
 -- 2949857 - в сумме по секциям  
 
-3. Партиционируем таблицу bookings по диапазону  
+#### 3. Партиционируем таблицу bookings по диапазону  
 
 -- переименуем старую таблицу  
 ALTER TABLE bookings RENAME TO bookings_old;  
