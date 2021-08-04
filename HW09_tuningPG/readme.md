@@ -9,7 +9,7 @@
 - настроить кластер PostgreSQL 13 на максимальную производительность не обращая внимание на возможные проблемы с надежностью в случае аварийной перезагрузки виртуальной машины
 - нагрузить кластер через утилиту https://github.com/Percona-Lab/sysbench-tpcc (требует установки https://github.com/akopytov/sysbench)
 
-Установим Sysbench  
+#### Установим Sysbench  
 
 curl -s https://packagecloud.io/install/repositories/akopytov/sysbench/script.deb.sh  
 sudo bash  
@@ -77,4 +77,4 @@ synchronous_commit = off
 
 По тесту среднее tps составило 172.82
 
-Вывод: лучшие настройки дал сайт pgtune, дальше пыталась выкручивать их, но лучшего результата не добилась
+#### Вывод: лучшие настройки дал сайт pgtune, дальше пыталась выкручивать их, но лучшего результата не добилась
