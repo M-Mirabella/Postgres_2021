@@ -54,7 +54,7 @@ ALTER SYSTEM SET wal_level = logical;
 В postgresql.conf на первом сервере:  
 listen_addresses = '*'  
 
-В pg_hba.conf на ВМ 1:  
+В pg_hba.conf на ВМ 2:  
 host    rep             all             10.128.0.19/32          md5
 
 Рестартуем кластер  
@@ -67,7 +67,7 @@ CREATE PUBLICATION test2_pub FOR TABLE test2;
 \password  
 11111
 
-Просмотр созданной публикации на ВМ1  
+Просмотр созданной публикации на ВМ2  
 \dRp+
 
 На ВМ 1 создадим подписку к БД на таблицу test2 с ВМ 2  
