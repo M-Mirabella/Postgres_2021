@@ -1,6 +1,6 @@
 ### Разворачиваем и настраиваем БД с большими данными
 
-####Цель:
+#### Цель:
 - знать различные механизмы загрузки данных
 - уметь пользоваться различными механизмами загрузки данных
 
@@ -83,6 +83,7 @@ Time: 926304.233 ms (15:26.304)
 #### 1 запрос: 
 select count (*) from taxi_trips; 
 
+MS SQL:
 (No column name)  
 28927717  
 
@@ -91,7 +92,7 @@ SQL Server Execution Times:
    
 
 PG:  
- count  
+count  
 ----------  
  28927717  
 (1 row)
@@ -107,12 +108,13 @@ FROM taxi_trips
 group by payment_type  
 order by 3;
 
- SQL Server Execution Times:  
-   CPU time = 292189 ms,  elapsed time = 552122 ms.
+ SQL Server Execution Times:
+   CPU time = 61468 ms,  elapsed time = 154877 ms. (3 минуты)
 
 PG:  
 Time: 463220.272 ms (07:43.220)
 
+Вобще не очень корректно сравнивать в данном случае, тк. используются очень разные конфигурации машин.
 
 Описать что и как делали и с какими проблемами столкнулись
 
